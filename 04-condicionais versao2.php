@@ -7,7 +7,7 @@
     <title>Condicionais</title>
     <style>
         .normal{
-            background-color: lightblue;
+            background-color: lightcoral;
             color: red;
         }
         .repor{
@@ -27,8 +27,11 @@
     <?php
     $numero = 10;
     if($numero >=5 ){
-        echo "<p>$numero é maior/igual a 5 </p>";
-    }
+    ?>    
+        <p> <?=$numero?> é maior/igual a 5 </p>
+    
+    <?php 
+    }   
     ?>
 
     <h2>Composta</h2>
@@ -36,16 +39,26 @@
     $produto = "TV";
     $qtdEmEstoque = 10; // o que temos no momento
     $qtdCritica = 5; // mínimo necessário
-    echo "<h3>Produto: $produto</h3>";
-    echo "<h4>Estoque: $qtdCritica </h4";
-    if($qtdEmEstoque < $qtdCritica){
-        echo "<p class='repor'> É necessário comprar/repor!</p>";
+    ?>
 
-        if($qtdEmEstoque == 0){
-            echo "<p> <span class='urgente'>URGENTE!</span> </p>";
-        }
+    <h3>Produto: <?=$produto?></h3>
+    <h4>Estoque: <?=$qtdCritica?> </h4>
+
+    <?php
+    if($qtdEmEstoque < $qtdCritica){
+    ?>    
+        <p class="repor"> É necessário comprar/repor!</p>
+    
+    <?php
+    if($qtdEmEstoque == 0){
+    ?>    
+        <p> <span class="urgente">URGENTE!</span> </p>
+    <?php    
+    }
     }else {
-        echo "<p class='normal'> Estoque normal.</p>";
+    ?>    
+        <p class="normal"> Estoque normal.</p>
+    <?php
     }
     ?>
 
@@ -68,8 +81,8 @@
         default : $garantia = 1; break;
 
     }
-     echo "<p> O $produto tem garantia de $garantia ano(s)</p>";
-     ?>
+    ?>
+    <p> O <?=$produto?> tem garantia de <?=$garantia?> ano(s)</p>
 
 
 </body>

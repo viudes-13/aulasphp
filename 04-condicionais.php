@@ -7,7 +7,7 @@
     <title>Condicionais</title>
     <style>
         .normal{
-            background-color: lightblue;
+            background-color: red;
             color: red;
         }
         .repor{
