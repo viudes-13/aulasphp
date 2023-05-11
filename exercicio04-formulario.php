@@ -15,14 +15,18 @@
         <input required type="text" name="produto" id="produto">
     </p>
     
+    <?php
+    $fabricantes = ["Dell", "Asus","LG","Microsoft","Apple"];
+    ?>
+    
+
     <p>
         <label for="fabricante">Fabricante:</label>
         <select name="fabricante" id="fabricante">
             <option value=""></option>
-            <option>Casas Bahia</option>
-            <option>Mercado livre</option>
-            <option>Shope</option>
-            <option>Magazeluiza</option>
+            <?php foreach ($fabricantes as $fabricante) { ?>
+                <option> <?=$fabricante?> </option>
+                <?php } ?>
         </select>
     </p>
 

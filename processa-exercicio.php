@@ -28,9 +28,6 @@
         <li>Descricao:<?= $descricao ?></li>
     </ul>
 
-
-
-
 </body>
 
 </html>
